@@ -3,7 +3,7 @@ plugins {
     id "maven-publish"
 }
 
-sourceCompatibility = targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -88,9 +88,9 @@ dependencies {
     // compile against the JEI API but do not include it at runtime
     // don't worry about loom "not finding a forge mod" here,
     // JEI's api just doesn't have any class with an @Mod annotation
-    // modCompileOnly "mezz.jei:jei-1.17.1:${jei_version}:api"
+    // modCompileOnly "mezz.jei:jei-1.18.2:${jei_version}:api"
     // at runtime, use the full JEI jar
-    // modRuntimeOnly "mezz.jei:jei-1.17.1:${jei_version}"
+    // modRuntimeOnly "mezz.jei:jei-1.18.2:${jei_version}"
 }
 
 processResources {
@@ -110,7 +110,7 @@ tasks.withType(JavaCompile) {
     // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
     // If Javadoc is generated, this must be specified in that task too.
     options.encoding = "UTF-8"
-    options.release = 16
+    options.release = 17
 }
 
 java {
