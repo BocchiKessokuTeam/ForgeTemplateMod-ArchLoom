@@ -1,5 +1,5 @@
 plugins {
-    id "dev.architectury.loom" version "0.12.0-SNAPSHOT"
+    id "dev.architectury.loom" version "1.0-SNAPSHOT"
     id "maven-publish"
 }
 
@@ -139,13 +139,7 @@ jar {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            // add all the jars that should be included when publishing to maven
-            artifact(remapJar) {
-                builtBy remapJar
-            }
-            artifact(sourcesJar) {
-                builtBy remapSourcesJar
-            }
+			from components.java
         }
     }
 
