@@ -12,7 +12,7 @@ group = project.maven_group
 loom {
     // use this if you are using the official mojang mappings
     // and want loom to stop warning you about their license
-    silentMojangMappingsLicense()
+    // silentMojangMappingsLicense()
 
     // since loom 0.10, you are **required** to use the
     // "forge" block to configure forge-specific features,
